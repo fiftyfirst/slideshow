@@ -1,0 +1,36 @@
+@mixin transition($transition: all 1s linear) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+.slideshow {
+    position: relative;
+}
+.slideshow-ready .slide {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide {
+    display: none;
+    &:first-child {
+        display: block;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.csstransitions {
+    .slideshow-ready .slide {
+        @include transition(opacity .6s linear);
+    }
+    .slide {
+        opacity: 0;
+    }
+    .slide-active {
+        opacity: 1;
+    }
+}

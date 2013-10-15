@@ -1,0 +1,34 @@
+.slideshow {
+  position: relative;
+}
+
+.slideshow-ready .slide {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide {
+  display: none;
+}
+.slide:first-child {
+  display: block;
+}
+.slide img {
+  display: block;
+  width: 100%;
+}
+
+.csstransitions .slideshow-ready .slide {
+  -webkit-transition: opacity 0.6s linear;
+  -moz-transition: opacity 0.6s linear;
+  -o-transition: opacity 0.6s linear;
+  transition: opacity 0.6s linear;
+}
+.csstransitions .slide {
+  opacity: 0;
+}
+.csstransitions .slide-active {
+  opacity: 1;
+}
