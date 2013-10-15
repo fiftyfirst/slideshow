@@ -1,8 +1,8 @@
 Slideshow
 =========
-Author: Chiel Robben  <!-- Preserve line break -->
-License: MIT  <!-- Preserve line break -->
-Website: http://pephers.org  <!-- Preserve line break -->
+Author: Chiel Robben  <!--- Preserve line break -->
+License: MIT  <!--- Preserve line break -->
+Website: http://pephers.org  <!--- Preserve line break -->
 
 Slideshow plugin for jQuery.
 
