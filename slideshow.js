@@ -22,7 +22,8 @@
         var defaults = {
             auto: true,
             interval: 5000,
-            duration: 600
+            duration: 600,
+            pause: true
         };
 
         this.$element = $(element);
@@ -65,7 +66,7 @@
             });
 
             // Pause slideshow when the mouse cursor is hovering
-            if (!Modernizr.touch) {
+            if (!Modernizr.touch && this.options.pause) {
 
                 self.$element.on({
 
