@@ -177,8 +177,6 @@
 
             }
 
-            self.setHeight();
-
         },
 
         /**
