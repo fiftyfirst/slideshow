@@ -23,7 +23,8 @@
             auto: true,
             interval: 5000,
             duration: 600,
-            pause: true
+            pause: true,
+            zIndexOffset: 0
         };
 
         this.$element = $(element);
@@ -53,7 +54,15 @@
             if (Modernizr.csstransitions) {
                 self.$slides.eq(self.currentSlide).addClass('slide-active');
             } else {
-                self.$slides.hide().eq(self.currentSlide).show();
+
+                self.$slides.css(
+                    'zIndex',
+                    self.options.zIndexOffset + 1
+                ).hide().eq(self.currentSlide).css(
+                    'zIndex',
+                    self.options.zIndexOffset + 2
+                ).show();
+
             }
 
             // Start the slideshow on load
@@ -156,11 +165,19 @@
                 self.$slides.removeClass('slide-active').eq(self.currentSlide).addClass('slide-active');
             } else {
 
-                self.$slides.eq(self.currentSlide).fadeIn(self.options.duration, function () {
+                self.$slides.css(
+                    'zIndex',
+                    self.options.zIndexOffset + 1
+                ).eq(self.currentSlide).css(
+                    'zIndex',
+                    self.options.zIndexOffset + 2
+                ).fadeIn(self.options.duration, function () {
                     self.$slides.eq(previousSlide).hide();
                 });
 
             }
+
+            self.setHeight();
 
         },
 
