@@ -2,7 +2,7 @@
     "name": "slideshow",
     "version": "0.0.1",
     "dependencies": {
-        "jquery": "~1.10"
+        "jquery": "~1.10",
         "modernizr": "~2.6.0"
-    },
+    }
 }
