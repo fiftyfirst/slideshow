@@ -106,7 +106,7 @@
             var self = this;
 
             // Prevent multiple timers from running at once
-            if (self.isRunning) {
+            if (self.isRunning) {
                 clearInterval(self.isRunning);
             }
 
