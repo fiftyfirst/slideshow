@@ -33,7 +33,7 @@ Initialize using:
     <script src="jquery.js"></script>
     <script src="slideshow.js"></script>
     <script>
-    $(funciton () {
+    $(function () {
         $('.slideshow').slideshow();
     });
     </script>
