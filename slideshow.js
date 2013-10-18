@@ -5,6 +5,7 @@
  *
  * @dependencies jQuery, Modernizr
  * @author Chiel Robben <chiel@pephers.org>
+ * @url https://github.com/Pephers/Slideshow
  * @license MIT
  */
 (function ($, Modernizr, window, undefined) {
