@@ -185,7 +185,7 @@
          */
         setHeight: function () {
 
-            var height = this.$slides.eq(this.currentSlide)[0].offsetHeight;
+            var height = this.$slides.eq(this.currentSlide).height();
 
             this.$element[0].style.height = height + 'px';
 
