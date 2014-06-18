@@ -26,6 +26,8 @@
             duration: 600,
             pause: true,
             zIndexOffset: 0,
+            previous: undefined,
+            next: undefined,
             onChange: undefined
         };
 
@@ -75,6 +77,14 @@
                 self.start();
 
             });
+
+            if (self.options.next) {
+                self.options.next.on('click' $.proxy(self.nextSlide, self));
+            }
+
+            if (self.options.previous) {
+                self.options.previous.on('click' $.proxy(self.previousSlide, self));
+            }
 
             // Pause slideshow when the mouse cursor is hovering
             if (!Modernizr.touch && this.options.pause) {
