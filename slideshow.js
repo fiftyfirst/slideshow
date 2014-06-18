@@ -84,6 +84,9 @@
 
                     self.nextSlide.call(self);
 
+                    // Reset interval
+                    self.start.call(self);
+
                     e.preventDefault();
 
                 });
@@ -95,6 +98,9 @@
                 self.options.previous.on('click', function (e) {
 
                     self.previousSlide.call(self);
+
+                    // Reset interval
+                    self.start.call(self);
 
                     e.preventDefault();
 
