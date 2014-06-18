@@ -25,7 +25,8 @@
             interval: 5000,
             duration: 600,
             pause: true,
-            zIndexOffset: 0
+            zIndexOffset: 0,
+            onChange: undefined
         };
 
         this.$element = $(element);
@@ -176,6 +177,11 @@
                     self.$slides.eq(previousSlide).hide();
                 });
 
+            }
+
+            // Execute callback function if set
+            if (self.onChange) {
+                self.onChange.call(self);
             }
 
         },
