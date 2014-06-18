@@ -79,11 +79,27 @@
             });
 
             if (self.options.next) {
-                self.options.next.on('click', $.proxy(self.nextSlide, self));
+
+                self.options.next.on('click', function (e) {
+
+                    self.nextSlide.call(self);
+
+                    e.preventDefault();
+
+                });
+
             }
 
             if (self.options.previous) {
-                self.options.previous.on('click', $.proxy(self.previousSlide, self));
+
+                self.options.previous.on('click', function (e) {
+
+                    self.previousSlide.call(self);
+
+                    e.preventDefault();
+
+                });
+
             }
 
             // Pause slideshow when the mouse cursor is hovering
