@@ -206,8 +206,8 @@
             }
 
             // Execute callback function if set
-            if (self.onChange) {
-                self.onChange.call(self);
+            if (self.options.onChange) {
+                self.options.onChange.call(self);
             }
 
         },
