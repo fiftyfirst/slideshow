@@ -79,11 +79,11 @@
             });
 
             if (self.options.next) {
-                self.options.next.on('click' $.proxy(self.nextSlide, self));
+                self.options.next.on('click', $.proxy(self.nextSlide, self));
             }
 
             if (self.options.previous) {
-                self.options.previous.on('click' $.proxy(self.previousSlide, self));
+                self.options.previous.on('click', $.proxy(self.previousSlide, self));
             }
 
             // Pause slideshow when the mouse cursor is hovering
