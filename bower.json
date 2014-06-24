@@ -1,6 +1,6 @@
 {
     "name": "slideshow",
-    "version": "0.1.9",
+    "version": "0.2.0",
     "dependencies": {
         "jquery": "*",
         "modernizr": "modernizr#2"

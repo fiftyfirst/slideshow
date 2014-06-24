@@ -26,6 +26,7 @@
             duration: 600,
             pause: true,
             zIndexOffset: 0,
+            clickEvent: 'click',
             previous: undefined,
             next: undefined,
             onChange: undefined
@@ -80,7 +81,7 @@
 
             if (self.options.next) {
 
-                self.options.next.on('click', function (e) {
+                self.options.next.on(self.options.clickEvent, function (e) {
 
                     self.nextSlide.call(self);
 
@@ -95,7 +96,7 @@
 
             if (self.options.previous) {
 
-                self.options.previous.on('click', function (e) {
+                self.options.previous.on(self.options.clickEvent, function (e) {
 
                     self.previousSlide.call(self);
 

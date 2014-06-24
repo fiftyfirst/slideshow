@@ -48,5 +48,8 @@ Optional options are:
         duration: 600, // Duration of fallback jQuery animation
         pause: true, // Pause slideshow when the mouse cursor is positioned over the slideshow
         zIndexOffset: 0, // Offset the z-index
+        clickEvent: 'click', // Name of click event
+        previous: undefined, // jQuery DOM object
+        next: undefined, // jQuery DOM object
         onChange: function () {} // Callback function with the Slideshow as context (this keyword)
     });
